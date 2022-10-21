@@ -1,0 +1,48 @@
+.relatorios
+{
+  margin: 20vh 0;
+}
+
+.listar__container
+{
+  width: 70vw;
+  border-radius: 10px;
+  margin-top: 10vh;
+}
+
+.button_edit
+{
+  border: none;
+  background-color: white;
+}
+
+.mat-18
+{
+  color: #265a88;
+}
+
+td:nth-child(1)
+{
+  width: 30%;
+}
+
+td:nth-child(2)
+{
+  width: 20%;
+}
+
+td:nth-child(3)
+{
+  width: 20%;
+}
+
+td:nth-child(4)
+{
+  width: 15%;
+}
+
+td:nth-child(5)
+{
+  width: 15%;
+}
+

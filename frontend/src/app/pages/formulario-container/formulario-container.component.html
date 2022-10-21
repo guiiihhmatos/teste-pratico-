@@ -1,0 +1,64 @@
+<div class="formularioRegistro">
+
+  <h2 class="my-5">Cadastrar Container</h2>
+
+  <form [formGroup]="containerForm" (ngSubmit)="onSaveContainer()" class="d-flex flex-column align-items-center">
+
+    <div class="form-group w-75 my-2">
+      <label>Cliente</label>
+      <input type="text" formControlName="cliente" class="form-control">
+
+    </div>
+
+    <div class="form-group w-75 my-2">
+      <label>Número do Container</label>
+      <input type="text" formControlName="numeroContainer" class="form-control" placeholder="EX : TEST1234567">
+      <div class="form-error" *ngIf="containerForm.controls['numeroContainer'].touched && containerForm.controls['numeroContainer'].hasError('required')">
+        Digite o Número do container.
+      </div>
+      <div class="form-error" *ngIf="containerForm.controls['numeroContainer'].touched && containerForm.controls['numeroContainer'].hasError('minlength')">
+        Número de container muito pequeno.
+      </div>
+      <div class="form-error" *ngIf="containerForm.controls['numeroContainer'].touched && containerForm.controls['numeroContainer'].hasError('maxlength')">
+        Número de container muito grande.
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-between w-75 my-2">
+
+      <div class="form-group width-40">
+        <label>Tipo</label>
+        <select class="form-select" formControlName="tipo">
+          <option value="20">20</option>
+          <option value="40">40</option>
+        </select>
+      </div>
+
+      <div class="form-group width-40">
+        <label>Status</label>
+        <select class="form-select" formControlName="status">
+          <option value="vazio">Vazio</option>
+          <option value="cheio">Cheio</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-between w-75 my-2">
+
+      <div class="form-group width-40">
+        <label>Categoria</label>
+        <select class="form-select" formControlName="categoria">
+          <option value="importacao">Importação</option>
+          <option value="exportacao">Exportação</option>
+        </select>
+      </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-primary my-5 w-25" [disabled]="containerForm.invalid"> Cadastrar </button>
+
+  </form>
+
+</div>

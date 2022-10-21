@@ -1,0 +1,16 @@
+.formularioRegistro
+{
+  margin: 0 20%;
+  margin-bottom: 19vh;
+}
+
+.width-40
+{
+  width: 40%;
+}
+
+.form-error
+{
+  color: red;
+  font-size: 12px;
+}

@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+table {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-width: 500px;
+}
+
+th
+{
+  background-color: #265a88;
+}
+
+th.mat-header-cell {
+
+  color: white;
+  font-size: 14px;
+  text-align: left;
+  max-width: 300px;
+}
