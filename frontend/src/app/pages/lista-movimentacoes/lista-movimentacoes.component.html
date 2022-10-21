@@ -1,0 +1,31 @@
+<div class="d-flex flex-column justify-content-center align-items-center mb-5">
+
+  <div class="my-5">
+    <h2>Movimentações do container <strong>{{ container.numeroContainer }}</strong>  do cliente <strong>{{container.cliente}}</strong>  </h2>
+  </div>
+
+  <div class="lista-movimentacoes d-flex flex-column justify-content-center align-items-center w-50 shadow">
+    <table class="table w-75">
+      <thead>
+        <tr>
+
+          <th>Cliente</th>
+          <th>Número</th>
+          <th>Tipo</th>
+
+        </tr>
+      </thead>
+
+      <tbody *ngFor="let item of movimentacoes">
+        <tr>
+
+          <td> {{ item.tipoMovimentacao }} </td>
+          <td> {{ item.dataInicio }} </td>
+          <td> {{ item.dataFim }} </td>
+
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

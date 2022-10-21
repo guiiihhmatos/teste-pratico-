@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormularioMovimentacaoComponent } from './pages/formulario-movimentacao/formulario-movimentacao.component';
+import { ListaMovimentacoesComponent } from './pages/lista-movimentacoes/lista-movimentacoes.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormularioMovimentacaoComponent } from './pages/formulario-movimentacao
     FormularioContainerComponent,
     ListaContainerComponent,
     EditarContainerComponent,
-    FormularioMovimentacaoComponent
+    FormularioMovimentacaoComponent,
+    ListaMovimentacoesComponent
   ],
   imports: [
     BrowserModule,

@@ -26,10 +26,10 @@ public class MovimentacaoService {
 		return movimentacaoRepository.save(entity);
 	}
 	
-	public List<Movimentacao> findByIdContainer(long id)
-	{
-		return movimentacaoRepository.findByIdContainer(id);
-	}
+	//public List<Movimentacao> findByIdContainer(long id)
+	//{
+		//return movimentacaoRepository.findByIdContainer(id);
+	//}
 	
 	public Optional<Movimentacao> findById(long id)
 	{

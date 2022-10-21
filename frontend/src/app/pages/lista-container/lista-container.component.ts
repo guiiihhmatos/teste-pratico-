@@ -53,9 +53,9 @@ export class ListaContainerComponent implements OnInit {
 
   }
 
-  redirectToDetails(aplicativo : any)
+  redirectToEdit(container : any)
   {
-    this.router.navigate(['editar'], {relativeTo: this.rotaAtual, state:{data:aplicativo}})
+    this.router.navigate(['editar'], {relativeTo: this.rotaAtual, state:{data:container}})
   }
 
   redirectToAdd(id : any)
@@ -63,25 +63,13 @@ export class ListaContainerComponent implements OnInit {
     this.router.navigate(['add-movimentacao'], {relativeTo: this.rotaAtual, state:{data:id}})
   }
 
-  public doFilter = (value: string) => {
-    this.dataSource.filter = value.trim().toLocaleLowerCase();
+  redirectToDetails(container : any)
+  {
+    this.router.navigate(['detalhes-movimentacoes'], {relativeTo: this.rotaAtual, state:{data:container}})
   }
 
-  onGetAllMovimentacoes()
-  {
-    for (const element of this.container)
-    {
-      switch(element.categoria.toUpperCase())
-        {
-          case 'IMPORTACAO':
-            this.TotalImportacoes++
-            break
-
-          case 'EXPORTACAO':
-            this.TotalExportacoes++
-            break
-        }
-    }
+  public doFilter = (value: string) => {
+    this.dataSource.filter = value.trim().toLocaleLowerCase();
   }
 
   onDelete(id: any)

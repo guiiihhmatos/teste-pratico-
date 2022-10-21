@@ -21,6 +21,8 @@ export class EditarContainerComponent implements OnInit {
   {
     this.passedContainer = history.state.data
 
+    console.log(this.passedContainer)
+    
     this.containerForm = this.formBuilder.group({
       id: [this.passedContainer.id],
       cliente : [this.passedContainer.cliente],
@@ -28,9 +30,7 @@ export class EditarContainerComponent implements OnInit {
 		  tipo : [this.passedContainer.tipo],
 		  status : [this.passedContainer.status],
 		  categoria : [this.passedContainer.categoria],
-		  movimentacao : [this.passedContainer.movimentacao],
-		  dataInicio : [this.passedContainer.dataInicio],
-		  dataFim : [this.passedContainer.dataFim]
+
     })
   }
 

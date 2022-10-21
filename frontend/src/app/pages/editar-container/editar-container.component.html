@@ -11,17 +11,9 @@
     </div>
 
     <div class="form-group w-75 my-2">
+
       <label>Número do Container</label>
       <input type="text" formControlName="numeroContainer" class="form-control" placeholder="EX : TEST1234567">
-      <!-- <div class="form-error" *ngIf="containerForm.controls['numeroContainer'].touched && containerForm.controls['numeroContainer'].hasError('required')">
-        Digite o Número do container.
-      </div>
-      <div class="form-error" *ngIf="containerForm.controls['numeroContainer'].touched && containerForm.controls['numeroContainer'].hasError('minlength')">
-        Número de container muito pequeno.
-      </div>
-      <div class="form-error" *ngIf="containerForm.controls['numeroContainer'].touched && containerForm.controls['numeroContainer'].hasError('maxlength')">
-        Número de container muito grande.
-      </div> -->
 
     </div>
 
@@ -55,33 +47,7 @@
         </select>
       </div>
 
-      <div class="form-group width-40">
-        <label>Movimentação</label>
-        <select class="form-select" formControlName="movimentacao">
-          <option value="embarque">Embarque</option>
-          <option value="descarga">Descarga</option>
-          <option value="gatein">Gate in</option>
-          <option value="gateout">Gate out</option>
-          <option value="reposicionamento">Reposicionamento</option>
-          <option value="pesagem">Pesagem</option>
-          <option value="scanner">Scanner</option>
-        </select>
-      </div>
-
     </div>
-
-    <div class="d-flex justify-content-between w-75 my-2">
-      <div class="form-group width-40">
-        <label>Data Inicio</label>
-        <input type="date" formControlName="dataInicio" class="form-control">
-      </div>
-
-      <div class="form-group width-40">
-        <label>Data Fim</label>
-        <input type="date" formControlName="dataFim" class="form-control">
-      </div>
-    </div>
-
 
     <button type="submit" class="btn btn-primary my-5 w-25" [disabled]="containerForm.invalid"> Editar </button>
 

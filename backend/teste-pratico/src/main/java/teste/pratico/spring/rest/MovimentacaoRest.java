@@ -25,9 +25,9 @@ public class MovimentacaoRest {
 	private MovimentacaoService movimentacaoService;
 	
 	@GetMapping
-	private ResponseEntity<List<Movimentacao>> getAll(long id)
+	private ResponseEntity<List<Movimentacao>> getAll()
 	{
-		return ResponseEntity.ok(movimentacaoService.findByIdContainer(id));
+		return ResponseEntity.ok(movimentacaoService.findAll());
 	}
 	
 	@PostMapping
