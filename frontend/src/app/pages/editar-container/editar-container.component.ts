@@ -1,5 +1,4 @@
 import { Router } from '@angular/router';
-import { Container } from './../../model/container';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContainerService } from 'src/app/services/container.service';
@@ -12,7 +11,7 @@ import { ContainerService } from 'src/app/services/container.service';
 export class EditarContainerComponent implements OnInit {
 
   containerForm: FormGroup
-  passedContainer: Container
+  passedContainer: any
   constructor
   (
     private containerService: ContainerService,

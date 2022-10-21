@@ -10,6 +10,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -31,6 +34,7 @@ public class Movimentacao {
 	private String dataFim;
 	
 	@ManyToOne
+	@JsonBackReference
 	@JoinColumn(name = "container_id", nullable = false)
     private Container container;
 

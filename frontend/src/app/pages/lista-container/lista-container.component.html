@@ -32,12 +32,30 @@
       </ng-container>
 
       <ng-container matColumnDef="editar">
-          <th mat-header-cell *matHeaderCellDef> Editar </th>
+          <th mat-header-cell *matHeaderCellDef>  </th>
           <td mat-cell *matCellDef="let element">
             <button mat-icon-button class="button_edit" (click)="redirectToDetails(element)">
                 <mat-icon class="mat-18">edit</mat-icon>
             </button>
           </td>
+      </ng-container>
+
+      <ng-container matColumnDef="addMovimentacao">
+        <th mat-header-cell *matHeaderCellDef>  </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button class="button_edit" (click)="redirectToAdd(element.id)">
+              <mat-icon class="mat-18">add</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="movimentacao">
+        <th mat-header-cell *matHeaderCellDef>  </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button class="button_edit" (click)="redirectToAdd(element)">
+              <mat-icon class="mat-18">list</mat-icon>
+          </button>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

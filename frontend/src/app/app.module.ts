@@ -13,6 +13,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { FormularioMovimentacaoComponent } from './pages/formulario-movimentacao/formulario-movimentacao.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HeaderComponent,
     FormularioContainerComponent,
     ListaContainerComponent,
-    EditarContainerComponent
+    EditarContainerComponent,
+    FormularioMovimentacaoComponent
   ],
   imports: [
     BrowserModule,

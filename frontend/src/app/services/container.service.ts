@@ -1,14 +1,14 @@
-import { Container } from './../model/container';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContainerService {
 
-  private apiUrl = "http://localhost:8080/api/containers/"
+  private apiUrl = environment.apiUrl + "/api/containers/"
 
   constructor
   (
@@ -16,7 +16,7 @@ export class ContainerService {
   )
   { }
 
-  onSaveContainers(container: Container) : Observable<any>
+  onSaveContainers(container: any) : Observable<any>
   {
     return this.httpClient.post<any>(this.apiUrl, container)
   }

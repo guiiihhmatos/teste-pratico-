@@ -1,0 +1,47 @@
+<div class="formularioRegistro">
+
+  <h2 class="my-5">Cadastrar Movimentação</h2>
+
+  <form [formGroup]="movimentacaoForm" (ngSubmit)="onSaveMovimentacao(movimentacaoForm.value)" class="d-flex flex-column align-items-center">
+
+    <div class="d-flex justify-content-between w-75 my-2">
+
+      <div class="form-group width-70">
+        <label>Movimentação</label>
+        <select class="form-select" formControlName="tipoMovimentacao">
+          <option value="embarque">Embarque</option>
+          <option value="descarga">Descarga</option>
+          <option value="gatein">Gate in</option>
+          <option value="gateout">Gate out</option>
+          <option value="reposicionamento">Reposicionamento</option>
+          <option value="pesagem">Pesagem</option>
+          <option value="scanner">Scanner</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-between w-75 my-2">
+
+      <div class="form-group width-70">
+        <label>Data Inicio</label>
+        <input type="date" formControlName="dataInicio" class="form-control">
+      </div>
+
+    </div>
+
+    <div class="d-flex justify-content-between w-75 my-2">
+
+      <div class="form-group width-70">
+        <label>Data Fim</label>
+        <input type="date" formControlName="dataFim" class="form-control">
+      </div>
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary my-5 w-25" [disabled]="movimentacaoForm.invalid"> Cadastrar </button>
+
+  </form>
+
+</div>

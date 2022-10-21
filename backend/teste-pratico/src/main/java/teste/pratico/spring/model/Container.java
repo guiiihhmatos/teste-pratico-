@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
@@ -35,6 +35,7 @@ public class Container {
 	
 	private String categoria;
 	
+	@JsonManagedReference
 	@OneToMany(mappedBy = "container", targetEntity = Movimentacao.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Movimentacao> movimentacao;
 }

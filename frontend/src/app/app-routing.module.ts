@@ -1,3 +1,4 @@
+import { FormularioMovimentacaoComponent } from './pages/formulario-movimentacao/formulario-movimentacao.component';
 import { EditarContainerComponent } from './pages/editar-container/editar-container.component';
 import { FormularioContainerComponent } from './pages/formulario-container/formulario-container.component';
 import { ListaContainerComponent } from './pages/lista-container/lista-container.component';
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'lista-containers/editar', component: EditarContainerComponent
+  },
+  {
+    path: 'lista-containers/add-movimentacao', component: FormularioMovimentacaoComponent
   },
   {
     path: '', pathMatch: 'full', redirectTo: 'formulario'

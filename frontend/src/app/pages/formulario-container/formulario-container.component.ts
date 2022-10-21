@@ -1,7 +1,6 @@
 import { ContainerService } from './../../services/container.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Container } from 'src/app/model/container';
 import { Router } from '@angular/router';
 
 @Component({

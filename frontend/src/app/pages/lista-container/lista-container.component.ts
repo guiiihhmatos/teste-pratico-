@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Container } from 'src/app/model/container';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
@@ -13,13 +12,13 @@ import { ContainerService } from 'src/app/services/container.service';
 })
 export class ListaContainerComponent implements OnInit {
 
-  container: Container[] = []
+  container: any[] = []
 
   TotalImportacoes: number = 0
   TotalExportacoes: number = 0
 
 
-  public displayedColumns = ['cliente', 'codContainer', 'tipo', 'status', 'categoria', 'editar'];
+  public displayedColumns = ['cliente', 'codContainer', 'tipo', 'status', 'categoria', 'editar', 'addMovimentacao', 'movimentacao'];
 
   public dataSource = new MatTableDataSource<any>();
 
@@ -57,6 +56,11 @@ export class ListaContainerComponent implements OnInit {
   redirectToDetails(aplicativo : any)
   {
     this.router.navigate(['editar'], {relativeTo: this.rotaAtual, state:{data:aplicativo}})
+  }
+
+  redirectToAdd(id : any)
+  {
+    this.router.navigate(['add-movimentacao'], {relativeTo: this.rotaAtual, state:{data:id}})
   }
 
   public doFilter = (value: string) => {
