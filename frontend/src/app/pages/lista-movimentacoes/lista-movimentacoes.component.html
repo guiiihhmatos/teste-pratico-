@@ -20,8 +20,8 @@
         <tr>
 
           <td> {{ item.tipoMovimentacao }} </td>
-          <td> {{ item.dataInicio }} </td>
-          <td> {{ item.dataFim }} </td>
+          <td> {{ item.dataInicio | date : 'dd/MM/yyyy h:mm'}} </td>
+          <td> {{ item.dataFim | date : 'dd/MM/yyyy h:mm'}} </td>
 
         </tr>
       </tbody>

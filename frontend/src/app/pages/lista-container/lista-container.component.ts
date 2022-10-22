@@ -18,7 +18,7 @@ export class ListaContainerComponent implements OnInit {
   TotalExportacoes: number = 0
 
 
-  public displayedColumns = ['cliente', 'codContainer', 'tipo', 'status', 'categoria', 'editar', 'addMovimentacao', 'movimentacao'];
+  public displayedColumns = ['cliente', 'codContainer', 'tipo', 'status', 'categoria', 'editar', 'addMovimentacao', 'movimentacao', 'delete'];
 
   public dataSource = new MatTableDataSource<any>();
 
@@ -72,7 +72,7 @@ export class ListaContainerComponent implements OnInit {
     this.dataSource.filter = value.trim().toLocaleLowerCase();
   }
 
-  onDelete(id: any)
+  deleteContainer(id: any)
   {
     this.containerService.onDeleteContainer(id).subscribe(value => {
 

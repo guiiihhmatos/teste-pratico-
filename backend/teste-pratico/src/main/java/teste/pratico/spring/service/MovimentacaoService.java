@@ -21,18 +21,8 @@ public class MovimentacaoService {
 		return movimentacaoRepository.findAll();
 	}
 
-
 	public <S extends Movimentacao> S save(S entity) {
 		return movimentacaoRepository.save(entity);
 	}
 	
-	//public List<Movimentacao> findByIdContainer(long id)
-	//{
-		//return movimentacaoRepository.findByIdContainer(id);
-	//}
-	
-	public Optional<Movimentacao> findById(long id)
-	{
-		return movimentacaoRepository.findById(id);
-	}
 }

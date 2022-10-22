@@ -29,11 +29,6 @@ public class ContainerService {
 		containerRepository.deleteById(id);
 		
 	}
-
-	public void delete(Container entity) {
-		containerRepository.delete(entity);
-		
-	}
 	
 	public Optional<Container> findById(long id)
 	{

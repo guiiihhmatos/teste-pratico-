@@ -32,11 +32,16 @@ public class ContainerRest {
 		return ResponseEntity.ok(containerService.findAll());
 	}
 	
+	@GetMapping(value = "hello")
+	private String HelloWorld()
+	{
+		return "Hello world";
+	}
+	
 	@PostMapping
 	private ResponseEntity<Container> onSaveContainer(@RequestBody Container container) 
 	{
 		
-		System.out.println(container);
 		try {
 			
 			Container containerSalvo = containerService.save(container);

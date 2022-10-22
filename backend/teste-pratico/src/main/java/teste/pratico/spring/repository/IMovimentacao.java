@@ -10,5 +10,4 @@ import teste.pratico.spring.model.Movimentacao;
 @Repository
 public interface IMovimentacao extends JpaRepository<Movimentacao, Long>{
 	
-	//List<Movimentacao> findByIdContainer(long id_container);
 }

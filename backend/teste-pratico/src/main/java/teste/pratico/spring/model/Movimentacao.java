@@ -1,6 +1,7 @@
 package teste.pratico.spring.model;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Set;
 
@@ -29,9 +30,9 @@ public class Movimentacao {
 	
 	private String tipoMovimentacao;
 	
-	private String dataInicio;
+	private LocalDateTime dataInicio;
 	
-	private String dataFim;
+	private LocalDateTime dataFim;
 	
 	@ManyToOne
 	@JsonBackReference
